@@ -45,7 +45,7 @@ If you have any feedback, feel free to reach out to me directly.
 
 - [pflag](https://github.com/spf13/pflag) is a simple library for parsing CLI args, just like standard library, but POSIX/GNU-style
 - [cobra](https://github.com/spf13/cobra) is a powerful library for making modern CLI interfaces like `kubectl` or `docker`.  Supports subcommands, cascading flags, suggestions, shell autocompletions and many more.
-
+- [viper](https://github.com/spf13/viper) to load configuration from many sources (CLI args, environment variables, JSON/TOML/etc files, remote stores like etcd/Consul)
 
 
 #### Data Serialization
@@ -181,4 +181,3 @@ Compression and decompression:
 #### Other
 
 - [uuid](https://github.com/google/uuid)
-- [viper](https://github.com/spf13/viper) to load configuration from many sources (CLI args, environment variables, JSON/TOML/etc files, remote stores like etcd/Consul)
