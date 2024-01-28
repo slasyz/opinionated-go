@@ -15,7 +15,7 @@ If you have any feedback, feel free to reach out to me directly.
     - [Console](#console)
     - [Data Serialization](#data-serialization)
     - [Dependency Injection](#dependency-injection)
-    - [Error Handling](#error-handling)
+    - [Errors Handling](#errors-handling)
     - [Logging](#logging)
     - [Testing](#testing)
 
@@ -43,7 +43,7 @@ If you have any feedback, feel free to reach out to me directly.
 
 #### Console
 
-- [pflag](https://github.com/spf13/pflag) is a simple library for parsing CLI args, just like standard library, but POSIX/GNU-style.
+- [pflag](https://github.com/spf13/pflag) is a simple library for parsing CLI args, just like standard library, but POSIX/GNU-style
 - [cobra](https://github.com/spf13/cobra) is a powerful library for making modern CLI interfaces like `kubectl` or `docker`.  Supports subcommands, cascading flags, suggestions, shell autocompletions and many more.
 
 
@@ -61,24 +61,24 @@ If you have any feedback, feel free to reach out to me directly.
 Do not use libraries for that.
 
 
-#### Error Handling
+#### Errors Handling
 
-Use standard library.
+- [errors](https://pkg.go.dev/errors) from standard library
 
 
 #### Logging
 
 Structured logging:
 
-- [zerolog](https://github.com/rs/zerolog) — fast, popular, user-friendly, flexible.
-- [zap](https://github.com/uber-go/zap) is popular too, very fast, but slower than zerolog.
+- [zerolog](https://github.com/rs/zerolog) — fast, popular, user-friendly, flexible
+- [zap](https://github.com/uber-go/zap) is popular too, very fast, but slower than zerolog
 - [log/slog](https://pkg.go.dev/log/slog) from standard library (since Go 1.21).  Good choice if you don't want to introduce any third-party dependencies.
 
 
 #### Testing
 
-- [testify](https://github.com/stretchr/testify) provices a lot of well-designed syntactic sugar that the standard library lacks.
-- [moq](https://github.com/matryer/moq) for generating mock structures from interfaces.
+- [testify](https://github.com/stretchr/testify) provices a lot of well-designed syntactic sugar that the standard library lacks
+- [moq](https://github.com/matryer/moq) for generating mock structures from interfaces
 
 
 ### Server Side
@@ -101,11 +101,11 @@ Message brokers, queues, events:
 
 - [kafka-go](https://github.com/segmentio/kafka-go)
 - [amqp091-go](github.com/rabbitmq/amqp091-go) for RabbitMQ (maintained by the RabbitMQ team)
-- for ZeroMQ: [pebbe/zmq4](https://github.com/pebbe/zmq4) (wrapper for libzmq, requires cgo, cannot be cross-compiled), [go-zeromq/zmq4](https://github.com/go-zeromq/zmq4) (pure Go library, unclear development status)
+- for ZeroMQ: [pebbe/zmq4](https://github.com/pebbe/zmq4) (wrapper for libzmq, requires cgo, cannot be cross-compiled), [go-zeromq/zmq4](https://github.com/go-zeromq/zmq4) (pure Go library, unclear development status).
 
 Useful SQL utilities:
 
-- [sqlx](https://github.com/jmoiron/sqlx) to work convenient with structs (uses `database/sql` interface)
+- [sqlx](https://github.com/jmoiron/sqlx) to work conveniently with structs (uses `database/sql` interface)
 - [squirrel](https://github.com/Masterminds/squirrel) to generate SQL queries (for example, when your app supports filtering and you need to build a `WHERE` clause dynamically)
 
 
@@ -163,7 +163,7 @@ Archives:
 Compression and decompression:
 
 - [xz](https://github.com/ulikunitz/xz)
-- [compress/bzip2](https://pkg.go.dev/compress/bzip2) from standard library for decompression, and [dsnet/compress/bzip2](https://github.com/dsnet/compress) if you need compression too.
+- [compress/bzip2](https://pkg.go.dev/compress/bzip2) from standard library for decompression, and [dsnet/compress/bzip2](https://github.com/dsnet/compress) if you need compression too
 - [compress/gzip](https://pkg.go.dev/compress/gzip) from standard library
 
 
@@ -174,12 +174,11 @@ Compression and decompression:
 
 #### Tools
 
-- [golangci-lint](https://github.com/golangci/golangci-lint) for linters.
-- [goimports](https://pkg.go.dev/golang.org/x/tools/cmd/goimports) for sorting imports.  It should already be integrated in your IDE.
+- [golangci-lint](https://github.com/golangci/golangci-lint) for linters
+- [goimports](https://pkg.go.dev/golang.org/x/tools/cmd/goimports) for sorting imports and formatting code
 
 
 #### Other
 
 - [uuid](https://github.com/google/uuid)
-
-- [viper](https://github.com/spf13/viper) — configuration management, to load configuration from many sources (CLI args, environment variables, JSON/TOML/etc files, remote stores like etcd/Consul)
+- [viper](https://github.com/spf13/viper) to load configuration from many sources (CLI args, environment variables, JSON/TOML/etc files, remote stores like etcd/Consul)
