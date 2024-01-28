@@ -32,7 +32,7 @@ If you have any feedback, feel free to reach out to me directly.
 - [Other](#other)
     - [Archives](#archives)
     - [Templates](#templates)
-    - [CI/CD](#ci-cd)
+    - [Tools](#tools)
     - [Other](#other)
 
 
