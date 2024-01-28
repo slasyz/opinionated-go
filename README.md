@@ -28,6 +28,7 @@ If you have any feedback, feel free to reach out to me directly.
     - [Authentication, Authorization](#authentication-authorization)
     - [APIs](#apis)
     - [HTTP Client](#http-client)
+    - [Websockets](#websockets)
 
 - [Other](#other)
     - [Archives](#archives)
@@ -42,8 +43,9 @@ If you have any feedback, feel free to reach out to me directly.
 
 #### Console
 
-- [pflag](https://github.com/spf13/pflag) for parsing CLI args, just like standard library, but POSIX/GNU-style.
-- [cobra](https://github.com/spf13/cobra) for making modern CLI interfaces like `kubectl` or `docker`.  Supports subcommands, cascading flags, suggestions, shell autocompletions and many more.
+- [pflag](https://github.com/spf13/pflag) is a simple library for parsing CLI args, just like standard library, but POSIX/GNU-style.
+- [cobra](https://github.com/spf13/cobra) is a powerful library for making modern CLI interfaces like `kubectl` or `docker`.  Supports subcommands, cascading flags, suggestions, shell autocompletions and many more.
+
 
 
 #### Data Serialization
@@ -64,7 +66,9 @@ Do not use libraries for that.
 Use standard library.
 
 
-#### Structured Logging
+#### Logging
+
+Structured logging:
 
 - [zerolog](https://github.com/rs/zerolog) — fast, popular, user-friendly, flexible.
 - [zap](https://github.com/uber-go/zap) is popular too, very fast, but slower than zerolog.
@@ -97,7 +101,7 @@ Message brokers, queues, events:
 
 - [kafka-go](https://github.com/segmentio/kafka-go)
 - [amqp091-go](github.com/rabbitmq/amqp091-go) for RabbitMQ (maintained by the RabbitMQ team)
-- for ZeroMQ: [pebbe/zmq4](https://github.com/pebbe/zmq4) (wrapper around libzmq, requires cgo, cannot be cross-compiled), [go-zeromq/zmq4](https://github.com/go-zeromq/zmq4) (pure Go library, unclear development status)
+- for ZeroMQ: [pebbe/zmq4](https://github.com/pebbe/zmq4) (wrapper for libzmq, requires cgo, cannot be cross-compiled), [go-zeromq/zmq4](https://github.com/go-zeromq/zmq4) (pure Go library, unclear development status)
 
 Useful SQL utilities:
 
@@ -142,6 +146,10 @@ For URL routing:
 - [net/http](https://pkg.go.dev/net/http) from standard library
 - [requests](https://github.com/earthboundkid/requests) for syntactic sugar
 
+#### Websockets
+
+- [gorilla/websocket](https://github.com/gorilla/websocket)
+
 
 ### Other
 
@@ -150,7 +158,7 @@ For URL routing:
 Archives:
 
 - [archive/zip](https://pkg.go.dev/archive/zip) from standard library
-- [archive/tar](https://pkg.go.dev/archive/tar)
+- [archive/tar](https://pkg.go.dev/archive/tar) from standard library
 
 Compression and decompression:
 
