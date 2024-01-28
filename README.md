@@ -85,21 +85,21 @@ Structured logging:
 
 #### Databases
 
-SQL databases drivers:
+SQL databases:
 
-- [pgx](https://github.com/jackc/pgx) is a driver and toolkit for PostgreSQL.  Do not use `database/sql` interface (it's slower and supports fewer features) if you do not have specific reasons to do so.
+- [pgx](https://github.com/jackc/pgx) for PostgreSQL.  Do not use `database/sql` interface (it's slower and supports fewer features) if you do not have specific reasons to do so.
 - [go-sqlite3](https://github.com/mattn/go-sqlite3) for SQLite. It requires CGO, it should not be a problem generally, but if you want to avoid it, there is [sqlite](https://gitlab.com/cznic/sqlite) package, but it's much less popular.
-- [mysql](https://github.com/go-sql-driver/mysql)
+- [mysql](https://github.com/go-sql-driver/mysql) for MySQL
 - more drivers for `database/sql` interface on the [official wiki](https://go.dev/wiki/SQLDrivers)
 
-NoSQL:
+NoSQL databases:
 
-- [mongo-go-driver](https://github.com/mongodb/mongo-go-driver)
-- [go-redis](https://github.com/redis/go-redis)
+- [mongo-go-driver](https://github.com/mongodb/mongo-go-driver) for Mongo
+- [go-redis](https://github.com/redis/go-redis) for Redis
 
 Message brokers, queues, events:
 
-- [kafka-go](https://github.com/segmentio/kafka-go)
+- [kafka-go](https://github.com/segmentio/kafka-go) for Kafka
 - [amqp091-go](github.com/rabbitmq/amqp091-go) for RabbitMQ (maintained by the RabbitMQ team)
 - for ZeroMQ: [pebbe/zmq4](https://github.com/pebbe/zmq4) (wrapper for libzmq, requires cgo, cannot be cross-compiled), [go-zeromq/zmq4](https://github.com/go-zeromq/zmq4) (pure Go library, unclear development status).
 
@@ -107,6 +107,7 @@ Useful SQL utilities:
 
 - [sqlx](https://github.com/jmoiron/sqlx) to work conveniently with structs (uses `database/sql` interface)
 - [squirrel](https://github.com/Masterminds/squirrel) to generate SQL queries (for example, when your app supports filtering and you need to build a `WHERE` clause dynamically)
+- [goose](https://github.com/pressly/goose) for SQL migrations, supports SQL migrations and Go functions
 
 
 #### HTTP Server
@@ -121,7 +122,8 @@ For URL routing:
 
 #### OpenAPI
 
-- TODO
+- [oapi-codegen](https://github.com/deepmap/oapi-codegen) to generate Go boilerplate code based on OpenAPI 3.0 specification file
+- [swag](https://github.com/swaggo/swag) to generate Swagger 2.0 specification from Go code annotations
 
 ### Web
 
@@ -134,11 +136,11 @@ For URL routing:
 
 #### APIs
 
-- [google-api-go-client](https://github.com/googleapis/google-api-go-client)
-- [go-github](https://github.com/google/go-github)
-- [facebook](https://github.com/huandu/facebook)
-- [twitter](https://github.com/dghubble/go-twitter)
-- [telegram-bot-api](https://github.com/go-telegram-bot-api/telegram-bot-api)
+- [google-api-go-client](https://github.com/googleapis/google-api-go-client) for Google
+- [go-github](https://github.com/google/go-github) for GitHub
+- [facebook](https://github.com/huandu/facebook) for Facebook
+- [twitter](https://github.com/dghubble/go-twitter) for Twitter
+- [telegram-bot-api](https://github.com/go-telegram-bot-api/telegram-bot-api) for Telegram
 
 
 #### HTTP Client
@@ -180,4 +182,5 @@ Compression and decompression:
 
 #### Other
 
-- [uuid](https://github.com/google/uuid)
+- [uuid](https://github.com/google/uuid) to work with UUIDs
+- [date](https://github.com/rickb777/date) to work with dates
