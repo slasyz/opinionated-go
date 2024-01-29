@@ -19,22 +19,20 @@ If you have any feedback, feel free to reach out to me directly.
     - [Logging](#logging)
     - [Testing](#testing)
 
-- [Server Side](#server-side)
+- [Web](#web)
+    - [APIs](#apis)
+    - [Authentication and Authorization](#authentication-and-authorization)
     - [Databases](#databases)
+    - [HTTP Client](#http-client)
     - [HTTP Server](#http-server)
     - [OpenAPI](#openapi)
-
-- [Web](#web)
-    - [Authentication, Authorization](#authentication-authorization)
-    - [APIs](#apis)
-    - [HTTP Client](#http-client)
     - [Websockets](#websockets)
 
 - [Other](#other)
     - [Archives](#archives)
     - [Templates](#templates)
     - [Tools](#tools)
-    - [Other](#other)
+    - [Utilities](#utilities)
 
 
 ## Packages
@@ -87,7 +85,23 @@ Structured logging:
 - [moq](https://github.com/matryer/moq) for generating mock structures from interfaces
 
 
-### Server Side
+### Web
+
+#### APIs
+
+- [google-api-go-client](https://github.com/googleapis/google-api-go-client) for Google
+- [go-github](https://github.com/google/go-github) for GitHub
+- [facebook](https://github.com/huandu/facebook) for Facebook
+- [twitter](https://github.com/dghubble/go-twitter) for Twitter
+- [telegram-bot-api](https://github.com/go-telegram-bot-api/telegram-bot-api) for Telegram
+
+
+#### Authentication and Authorization
+
+- [jwt](https://github.com/golang-jwt/jwt) for JWT
+- [x/oauth](https://pkg.go.dev/golang.org/x/oauth2) for OAuth 2.0 clients, supports popular providers
+- [go-oidc](https://github.com/coreos/go-oidc) for OpenID Connect
+
 
 #### Databases
 
@@ -107,13 +121,19 @@ Clients for message brokers, queues, event systems:
 
 - [kafka-go](https://github.com/segmentio/kafka-go) for Kafka
 - [amqp091-go](github.com/rabbitmq/amqp091-go) for RabbitMQ (maintained by the RabbitMQ team)
-- for ZeroMQ: [pebbe/zmq4](https://github.com/pebbe/zmq4) (wrapper for `libzmq`, requires `cgo`, cannot be cross-compiled), [go-zeromq/zmq4](https://github.com/go-zeromq/zmq4) (pure Go library, unclear development status).
+- for ZeroMQ there are [pebbe/zmq4](https://github.com/pebbe/zmq4) (wrapper for `libzmq`, requires `cgo`, cannot be cross-compiled) and [go-zeromq/zmq4](https://github.com/go-zeromq/zmq4) (pure Go library, unclear development status).
 
 SQL utilities:
 
 - [sqlx](https://github.com/jmoiron/sqlx) to work conveniently with structs (uses `database/sql` interface)
 - [squirrel](https://github.com/Masterminds/squirrel) to generate SQL queries (for example, when your app supports filtering and you need to build a `WHERE` clause dynamically)
 - [goose](https://github.com/pressly/goose) for SQL migrations, supports both text-based SQL migrations and Go functions
+
+
+#### HTTP Client
+
+- [net/http](https://pkg.go.dev/net/http) from standard library
+- [requests](https://github.com/earthboundkid/requests) for syntactic sugar
 
 
 #### HTTP Server
@@ -123,8 +143,8 @@ No need for frameworks, use standard library.
 For URL routing:
 
 - [net/http.ServeMux](https://pkg.go.dev/net/http#ServeMux) from standard library is good enough
-- [httprouter](https://github.com/julienschmidt/httprouter) is more powerful, supports parameters like `/post/:id` and many more. Not actively developed right now, but widely adopted.
-- [chi](https://github.com/go-chi/chi) is powerful and lightweight too, has even more features.
+- [httprouter](https://github.com/julienschmidt/httprouter) is more powerful, very fast, supports parameters like `/post/:id` and many more. Not actively developed right now, but widely adopted.
+- [chi](https://github.com/go-chi/chi) is powerful and lightweight too, has even more features
 
 
 #### OpenAPI
@@ -132,32 +152,10 @@ For URL routing:
 - [oapi-codegen](https://github.com/deepmap/oapi-codegen) to generate Go boilerplate code based on OpenAPI 3.0 specification file
 - [swag](https://github.com/swaggo/swag) to generate Swagger 2.0 specification from Go code annotations
 
-### Web
-
-#### Authentication, Authorization
-
-- [jwt](https://github.com/golang-jwt/jwt) for JWT
-- [x/oauth](https://pkg.go.dev/golang.org/x/oauth2) for OAuth 2.0 clients, supports popular providers
-- [go-oidc](https://github.com/coreos/go-oidc) for OpenID Connect
-
-
-#### APIs
-
-- [google-api-go-client](https://github.com/googleapis/google-api-go-client) for Google
-- [go-github](https://github.com/google/go-github) for GitHub
-- [facebook](https://github.com/huandu/facebook) for Facebook
-- [twitter](https://github.com/dghubble/go-twitter) for Twitter
-- [telegram-bot-api](https://github.com/go-telegram-bot-api/telegram-bot-api) for Telegram
-
-
-#### HTTP Client
-
-- [net/http](https://pkg.go.dev/net/http) from standard library
-- [requests](https://github.com/earthboundkid/requests) for syntactic sugar
 
 #### Websockets
 
-- [gorilla/websocket](https://github.com/gorilla/websocket)
+- [gorilla/websocket](https://github.com/gorilla/websocket) for both server and client
 
 
 ### Other
@@ -187,7 +185,7 @@ Compression and decompression:
 - [goimports](https://pkg.go.dev/golang.org/x/tools/cmd/goimports) for sorting imports and formatting code
 
 
-#### Other
+#### Utilities
 
 - [uuid](https://github.com/google/uuid) to work with UUIDs
 - [date](https://github.com/rickb777/date) to work with dates
