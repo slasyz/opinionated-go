@@ -29,6 +29,7 @@ If you have any feedback, feel free to reach out to me directly.
     - [Websockets](#websockets)
 
 - [Other](#other)
+    - [AI](#ai)
     - [Archives](#archives)
     - [Templates](#templates)
     - [Tools](#tools)
@@ -47,8 +48,8 @@ If you have any feedback, feel free to reach out to me directly.
 
 TUI:
 
-- [bubletea](https://github.com/charmbracelet/bubbletea) is a framework to build terminal UIs
 - [huh](https://github.com/charmbracelet/huh) is a simple yet powerful library for building interactive forms and prompts in the terminal
+- [bubletea](https://github.com/charmbracelet/bubbletea) is a framework for building terminal UIs
 - for more libraries and components for glamorous console interfaces, see [charm.sh](https://charm.sh/)
 
 
@@ -159,6 +160,11 @@ For URL routing:
 
 
 ### Other
+
+#### AI
+
+- [langchaingo](https://github.com/tmc/langchaingo) to build LLM-powered apps
+
 
 #### Archives and Compression
 
