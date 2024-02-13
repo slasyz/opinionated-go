@@ -31,6 +31,7 @@ If you have any feedback, feel free to reach out to me directly.
 - [Other](#other)
     - [AI](#ai)
     - [Archives](#archives)
+    - [GUI](#gui)
     - [Templates](#templates)
     - [Tools](#tools)
     - [Utilities](#utilities)
@@ -150,7 +151,7 @@ For URL routing:
 
 #### OpenAPI
 
-- [oapi-codegen](https://github.com/deepmap/oapi-codegen) to generate Go boilerplate code based on OpenAPI 3.0 specification file
+- [oapi-codegen](https://github.com/deepmap/oapi-codegen) to generate Go boilerplate code from an OpenAPI 3.0 specification file
 - [swag](https://github.com/swaggo/swag) to generate Swagger 2.0 specification from Go code annotations
 
 
@@ -178,6 +179,13 @@ Compression and decompression:
 - [xz](https://github.com/ulikunitz/xz)
 - [compress/bzip2](https://pkg.go.dev/compress/bzip2) from standard library for decompression, and [dsnet/compress/bzip2](https://github.com/dsnet/compress) if you need compression too
 - [compress/gzip](https://pkg.go.dev/compress/gzip) from standard library
+
+
+#### GUI
+
+Besides obvious GTK and Qt bindings:
+
+- [gio](https://gioui.org/) — lightweight immediate mode GUI library
 
 
 #### Templates
