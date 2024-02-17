@@ -49,6 +49,7 @@ If you have any feedback, feel free to reach out to me directly.
 
 TUI:
 
+- [go-prompt](https://github.com/c-bata/go-prompt) is a library for building powerful interactive prompts
 - [huh](https://github.com/charmbracelet/huh) is a simple yet powerful library for building interactive forms and prompts in the terminal
 - [bubletea](https://github.com/charmbracelet/bubbletea) is a framework for building terminal UIs
 - for more libraries and components for glamorous console interfaces, see [charm.sh](https://charm.sh/)
