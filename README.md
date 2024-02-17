@@ -12,12 +12,16 @@ If you have any feedback, feel free to reach out to me directly.
 ## Contents
 
 - [Basic](#basic)
-    - [Console](#console)
     - [Data Serialization](#data-serialization)
     - [Dependency Injection](#dependency-injection)
     - [Errors Handling](#errors-handling)
     - [Logging](#logging)
     - [Testing](#testing)
+
+- [UI](#ui)
+    - [Console](#console)
+    - [TUI](#tui)
+    - [GUI](#gui)
 
 - [Web](#web)
     - [APIs](#apis)
@@ -31,7 +35,6 @@ If you have any feedback, feel free to reach out to me directly.
 - [Other](#other)
     - [AI](#ai)
     - [Archives](#archives)
-    - [GUI](#gui)
     - [Templates](#templates)
     - [Tools](#tools)
     - [Utilities](#utilities)
@@ -40,20 +43,6 @@ If you have any feedback, feel free to reach out to me directly.
 ## Packages
 
 ### Basic
-
-#### Console
-
-- [pflag](https://github.com/spf13/pflag) is a simple library for parsing CLI args, just like [flag](https://pkg.go.dev/flag) from standard library, but uses POSIX/GNU-style `--flags` instead of `-flags`.
-- [cobra](https://github.com/spf13/cobra) is a powerful library for creating modern command-line interfaces like `kubectl` or `docker`.  It supports subcommands, cascading flags, suggestions, shell autocompletions, and many more.
-- [viper](https://github.com/spf13/viper) to load configuration from many sources (CLI args, environment variables, JSON/TOML/etc files, remote stores like etcd/Consul)
-
-TUI:
-
-- [go-prompt](https://github.com/c-bata/go-prompt) is a library for building powerful interactive prompts
-- [huh](https://github.com/charmbracelet/huh) is a simple yet powerful library for building interactive forms and prompts in the terminal
-- [bubletea](https://github.com/charmbracelet/bubbletea) is a framework for building terminal UIs
-- for more libraries and components for glamorous console interfaces, see [charm.sh](https://charm.sh/)
-
 
 #### Data Serialization
 
@@ -86,6 +75,30 @@ Structured logging:
 
 - [testify](https://github.com/stretchr/testify) provides a lot of well-designed syntactic sugar that the standard library lacks
 - [moq](https://github.com/matryer/moq) for generating mock structures from interfaces
+
+
+### UI
+
+#### Console
+
+- [pflag](https://github.com/spf13/pflag) is a simple library for parsing CLI args, just like [flag](https://pkg.go.dev/flag) from standard library, but uses POSIX/GNU-style `--flags` instead of `-flags`.
+- [cobra](https://github.com/spf13/cobra) is a powerful library for creating modern command-line interfaces like `kubectl` or `docker`.  It supports subcommands, cascading flags, suggestions, shell autocompletions, and many more.
+- [viper](https://github.com/spf13/viper) to load configuration from many sources (CLI args, environment variables, JSON/TOML/etc files, remote stores like etcd/Consul)
+
+
+#### TUI
+
+- [go-prompt](https://github.com/c-bata/go-prompt) is a library for building powerful interactive prompts
+- [huh](https://github.com/charmbracelet/huh) is a simple yet powerful library for building interactive forms and prompts in the terminal
+- [bubletea](https://github.com/charmbracelet/bubbletea) is a framework for building terminal UIs
+- for more libraries and components for glamorous console interfaces, see [charm.sh](https://charm.sh/)
+
+
+#### GUI
+
+Besides obvious GTK and Qt bindings:
+
+- [gio](https://gioui.org/) — lightweight immediate mode GUI library
 
 
 ### Web
@@ -180,13 +193,6 @@ Compression and decompression:
 - [xz](https://github.com/ulikunitz/xz)
 - [compress/bzip2](https://pkg.go.dev/compress/bzip2) from standard library for decompression, and [dsnet/compress/bzip2](https://github.com/dsnet/compress) if you need compression too
 - [compress/gzip](https://pkg.go.dev/compress/gzip) from standard library
-
-
-#### GUI
-
-Besides obvious GTK and Qt bindings:
-
-- [gio](https://gioui.org/) — lightweight immediate mode GUI library
 
 
 #### Templates
