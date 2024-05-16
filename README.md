@@ -165,7 +165,7 @@ For URL routing:
 #### Messaging Systems
 
 - [kafka-go](https://github.com/segmentio/kafka-go) for Kafka
-- [amqp091-go](github.com/rabbitmq/amqp091-go) for RabbitMQ (maintained by the RabbitMQ team)
+- [amqp091-go](https://github.com/rabbitmq/amqp091-go) for RabbitMQ (maintained by the RabbitMQ team)
 - for ZeroMQ there are [pebbe/zmq4](https://github.com/pebbe/zmq4) (wrapper for `libzmq`, requires `cgo`, cannot be cross-compiled) and [go-zeromq/zmq4](https://github.com/go-zeromq/zmq4) (pure Go library, unclear development status).
 
 
