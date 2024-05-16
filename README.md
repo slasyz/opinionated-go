@@ -27,14 +27,19 @@ If you have any feedback, feel free to reach out to me directly.
     - [APIs](#apis)
     - [Authentication and Authorization](#authentication-and-authorization)
     - [Databases](#databases)
+        - [SQL Clients](#sql-clients)
+        - [NoSQL Clients](#nosql-clients)
+        - [SQL Utils](#sql-utils)
     - [HTTP Client](#http-client)
     - [HTTP Server](#http-server)
+    - [Messaging Systems](#messaging-systems)
     - [OpenAPI](#openapi)
     - [Websockets](#websockets)
 
 - [Other](#other)
     - [AI](#ai)
     - [Archives](#archives)
+    - [Compression](#compression)
     - [Templates](#templates)
     - [Tools](#tools)
     - [Utilities](#utilities)
@@ -115,31 +120,25 @@ Besides obvious GTK and Qt bindings:
 #### Authentication and Authorization
 
 - [jwt](https://github.com/golang-jwt/jwt) for JWT
-- [x/oauth](https://pkg.go.dev/golang.org/x/oauth2) for OAuth 2.0 clients, supports popular providers
+- [x/oauth](https://pkg.go.dev/golang.org/x/oauth2) for OAuth 2.0 clients, supports [popular providers](https://pkg.go.dev/golang.org/x/oauth2#section-directories)
 - [go-oidc](https://github.com/coreos/go-oidc) for OpenID Connect
 
 
 #### Databases
 
-Clients for SQL databases:
+##### SQL Clients
 
 - [pgx](https://github.com/jackc/pgx) for PostgreSQL.  Use this driver directly instead of `database/sql` interface (because it is faster and supports more features) unless you do not have specific reasons to do so.
 - [go-sqlite3](https://github.com/mattn/go-sqlite3) for SQLite. It requires `cgo`, it should not be a problem generally, but if you want to avoid it, there is [sqlite](https://gitlab.com/cznic/sqlite) package, but it's much less popular.
 - [mysql](https://github.com/go-sql-driver/mysql) for MySQL
 - more drivers for `database/sql` interface on the [official wiki](https://go.dev/wiki/SQLDrivers)
 
-Clients for NoSQL databases:
+##### NoSQL Clients
 
 - [mongo-go-driver](https://github.com/mongodb/mongo-go-driver) for Mongo
 - [go-redis](https://github.com/redis/go-redis) for Redis
 
-Clients for message brokers, queues, event systems:
-
-- [kafka-go](https://github.com/segmentio/kafka-go) for Kafka
-- [amqp091-go](github.com/rabbitmq/amqp091-go) for RabbitMQ (maintained by the RabbitMQ team)
-- for ZeroMQ there are [pebbe/zmq4](https://github.com/pebbe/zmq4) (wrapper for `libzmq`, requires `cgo`, cannot be cross-compiled) and [go-zeromq/zmq4](https://github.com/go-zeromq/zmq4) (pure Go library, unclear development status).
-
-SQL utilities:
+##### SQL Utils
 
 - [sqlx](https://github.com/jmoiron/sqlx) to work conveniently with structs (uses `database/sql` interface)
 - [squirrel](https://github.com/Masterminds/squirrel) to generate SQL queries (for example, when your app supports filtering and you need to build a `WHERE` clause dynamically)
@@ -163,6 +162,13 @@ For URL routing:
 - [chi](https://github.com/go-chi/chi) is powerful and lightweight too, has even more features
 
 
+#### Messaging Systems
+
+- [kafka-go](https://github.com/segmentio/kafka-go) for Kafka
+- [amqp091-go](github.com/rabbitmq/amqp091-go) for RabbitMQ (maintained by the RabbitMQ team)
+- for ZeroMQ there are [pebbe/zmq4](https://github.com/pebbe/zmq4) (wrapper for `libzmq`, requires `cgo`, cannot be cross-compiled) and [go-zeromq/zmq4](https://github.com/go-zeromq/zmq4) (pure Go library, unclear development status).
+
+
 #### OpenAPI
 
 - [oapi-codegen](https://github.com/deepmap/oapi-codegen) to generate Go boilerplate code from an OpenAPI 3.0 specification file
@@ -181,14 +187,13 @@ For URL routing:
 - [langchaingo](https://github.com/tmc/langchaingo) to build LLM-powered apps
 
 
-#### Archives and Compression
-
-Archives:
+#### Archives
 
 - [archive/zip](https://pkg.go.dev/archive/zip) from standard library
 - [archive/tar](https://pkg.go.dev/archive/tar) from standard library
 
-Compression and decompression:
+
+#### Compression
 
 - [xz](https://github.com/ulikunitz/xz)
 - [compress/bzip2](https://pkg.go.dev/compress/bzip2) from standard library for decompression, and [dsnet/compress/bzip2](https://github.com/dsnet/compress) if you need compression too
